@@ -33,7 +33,7 @@ namespace RockPaperScissorsGame
             string playAgain = Console.ReadLine();
             if(playAgain == "YES")
             {
-                // how do you start game again in Main
+                RunGame();
             }
             else
             {
@@ -169,6 +169,7 @@ namespace RockPaperScissorsGame
             }
 
                  DisplayWinner();
+                 PlayAgain();
 
 
 
