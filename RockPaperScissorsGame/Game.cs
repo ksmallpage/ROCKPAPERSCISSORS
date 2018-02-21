@@ -39,36 +39,37 @@ namespace RockPaperScissorsGame
             // see if player1 one wins
             if (player1.playerChoice == "SCISSORS" && ((player2.playerChoice == "PAPER") || (player2.playerChoice == "LIZZARD")))
             {
-                Console.WriteLine($"{player1} wins");
-                //update score method
+                Console.WriteLine($"{player1.playerName} wins");
+                player1.numberOfWins++;
             }
             else if (player1.playerChoice == "PAPER" && ((player2.playerChoice == "ROCK") || (player2.playerChoice == "SPOCK")))
             {
-                Console.WriteLine($"{player1} wins");
-                //update score method
+                Console.WriteLine($"{player1.playerName} wins");
+                player1.numberOfWins++;
             }
             else if (player1.playerChoice == "ROCK" && ((player2.playerChoice == "LIZZARD") || (player2.playerChoice == "SCISSORS")))
             {
-                Console.WriteLine($"{player1} wins");
-                //update score method
+                Console.WriteLine($"{player1.playerName} wins");
+                player1.numberOfWins++;
             }
             else if (player1.playerChoice == "LIZZARD" && ((player2.playerChoice == "SPOCK") || (player2.playerChoice == "PAPER")))
             {
-                Console.WriteLine($"{player1} wins");
-                //update score method
+                Console.WriteLine($"{player1.playerName} wins");
+                player1.numberOfWins++;
             }
+       
             else if (player1.playerChoice == "SPOCK" && ((player2.playerChoice == "SCISSORS") || (player2.playerChoice == "ROCK")))
             {
-                Console.WriteLine($"{player1} wins the round");
-                //update score method
+                Console.WriteLine($"{player1.playerName} wins the round");
+                player1.numberOfWins++;
             }
             else if(player1.playerChoice == player2.playerChoice)
             {
                 Console.WriteLine("That round was a DRAW");
             }else
             {
-                Console.WriteLine($"{player2 }wins this round");
-                // update the score
+                Console.WriteLine($"{player2.playerName } wins this round");
+                player2.numberOfWins++;
             }
 
             // check if a draw
@@ -77,9 +78,9 @@ namespace RockPaperScissorsGame
 
         }
 
-        public void TrackScore()
+        public void DisplayScore()
         {
-
+            Console.WriteLine($"{player1.playerName} has won {player1.numberOfWins}, {player2.playerName} has won {player2.numberOfWins}");
         }
 
         public void DisplayWinner()
@@ -117,6 +118,7 @@ namespace RockPaperScissorsGame
             player1.PlayerChoice();
             player2.PlayerChoice();
             CalculateWinnerOfRound();
+            DisplayScore();
 
             // Check who won round
 

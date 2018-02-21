@@ -12,6 +12,7 @@ namespace RockPaperScissorsGame
 
         public string playerName;
         public string playerChoice;
+        public int numberOfWins;
       //  public string player1;
       //  public string player2;
 
@@ -19,7 +20,7 @@ namespace RockPaperScissorsGame
 
         public Player()
         {
-
+            numberOfWins = 0;
         }
 
         // Methods
