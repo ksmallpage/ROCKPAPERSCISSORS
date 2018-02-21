@@ -30,7 +30,7 @@ namespace RockPaperScissorsGame
         public void PlayAgain()
         {
             Console.WriteLine("Do you want to play again?");
-            string playAgain = Console.ReadLine();
+            string playAgain = Console.ReadLine().ToUpper();
             if(playAgain == "YES")
             {
                 RunGame();
@@ -114,12 +114,12 @@ namespace RockPaperScissorsGame
         {
             Console.WriteLine("Welcome to Rock Paper Scissors Lizzard Spock" + System.Environment.NewLine);
             Console.WriteLine("Who is player One: Enter your name." + System.Environment.NewLine);
-            player1.playerName = Console.ReadLine();
+            player1.playerName = Console.ReadLine().ToUpper();
             Console.WriteLine($"{player1.playerName} Are you playing another person or the Computer?\n");
-            secondHumanPlayerChoice = Console.ReadLine();
+            secondHumanPlayerChoice = Console.ReadLine().ToUpper();
             Console.Clear();
             DecideIfPlayerTwoIsAI();
-            //if(secondHumanPlayerChoice == "Computer")
+            //if(secondHumanPlayerChoice == "COMPUTER")
             //{
             //    player2 = new Computer();
             //    player2.playerName = "ZORF";
@@ -141,7 +141,7 @@ namespace RockPaperScissorsGame
 
             public void DecideIfPlayerTwoIsAI()
         {
-            if (secondHumanPlayerChoice == "Computer")
+            if (secondHumanPlayerChoice == "COMPUTER")
             {
 
                 player2 = new Computer();
@@ -152,7 +152,7 @@ namespace RockPaperScissorsGame
                 player2 = new Human();
 
                 Console.WriteLine("Who is player Two: Enter your name \n");
-                player2.playerName = Console.ReadLine();
+                player2.playerName = Console.ReadLine().ToUpper();
 
             }
         }

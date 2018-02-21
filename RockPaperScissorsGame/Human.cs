@@ -27,7 +27,7 @@ namespace RockPaperScissorsGame
         public override void PlayerChoice()
         {
             Console.WriteLine($"{playerName} What is your choice enter: ROCK, PAPER, SCISSORS, LIZZARD or SPOCK");
-            playerChoice = Console.ReadLine();
+            playerChoice = Console.ReadLine().ToUpper();
             Console.Clear();
           //  Console.WriteLine($"{playerChoice }");
 
