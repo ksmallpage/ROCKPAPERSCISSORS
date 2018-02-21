@@ -72,9 +72,7 @@ namespace RockPaperScissorsGame
                 player2.numberOfWins++;
             }
 
-            // check if a draw
 
-            // else Player two wins
 
         }
 
@@ -95,6 +93,7 @@ namespace RockPaperScissorsGame
             player1.playerName = Console.ReadLine();
             Console.WriteLine($"{player1.playerName} Are you playing another person or the Computer?\n");
             secondHumanPlayerChoice = Console.ReadLine();
+            Console.Clear();
             if(secondHumanPlayerChoice == "Computer")
             {
                 player2 = new Computer();
@@ -127,17 +126,6 @@ namespace RockPaperScissorsGame
                  DisplayScore();
 
 
-            // Check who won round
-
-            // update score
-
-            // play second round
-
-            // update score
-
-            // play third round
-
-            // update score
 
 
         }

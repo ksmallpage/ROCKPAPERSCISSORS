@@ -28,7 +28,8 @@ namespace RockPaperScissorsGame
         {
             Console.WriteLine($"{playerName} What is your choice enter: ROCK, PAPER, SCISSORS, LIZZARD or SPOCK");
             playerChoice = Console.ReadLine();
-            Console.WriteLine($"{playerChoice }");
+            Console.Clear();
+          //  Console.WriteLine($"{playerChoice }");
 
         }
     }
