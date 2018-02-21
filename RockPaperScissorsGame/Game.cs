@@ -86,6 +86,12 @@ namespace RockPaperScissorsGame
 
         }
 
+        public void DisplayWhoIsPlaying()
+        {
+            Console.WriteLine($"{player1.playerName} is Playing {player2.playerName} the game is the best of three rounds.\n");
+            Console.WriteLine("Live Long and Prosper!!");
+        }
+
         public void WhoIsPlaying()
         {
             Console.WriteLine("Welcome to Rock Paper Scissors Lizzard Spock" + System.Environment.NewLine);
@@ -94,8 +100,32 @@ namespace RockPaperScissorsGame
             Console.WriteLine($"{player1.playerName} Are you playing another person or the Computer?\n");
             secondHumanPlayerChoice = Console.ReadLine();
             Console.Clear();
-            if(secondHumanPlayerChoice == "Computer")
+            DecideIfPlayerTwoIsAI();
+            //if(secondHumanPlayerChoice == "Computer")
+            //{
+            //    player2 = new Computer();
+            //    player2.playerName = "ZORF";
+            //}
+            //else
+            //{
+            //    player2 = new Human();
+
+            //     Console.WriteLine("Who is player Two: Enter your name \n");
+            //    player2.playerName = Console.ReadLine();
+
+            //}
+            DisplayWhoIsPlaying();
+
+           // added DisplayWhoIsPlaying function
+           //  Console.WriteLine($"{player1.playerName} is Playing {player2.playerName} the game is the best of three rounds.\n");
+          //   Console.WriteLine("Live Long and Prosper!!");
+           }
+
+            public void DecideIfPlayerTwoIsAI()
+        {
+            if (secondHumanPlayerChoice == "Computer")
             {
+
                 player2 = new Computer();
                 player2.playerName = "ZORF";
             }
@@ -103,13 +133,12 @@ namespace RockPaperScissorsGame
             {
                 player2 = new Human();
 
-                 Console.WriteLine("Who is player Two: Enter your name \n");
+                Console.WriteLine("Who is player Two: Enter your name \n");
                 player2.playerName = Console.ReadLine();
 
             }
-            Console.WriteLine($"{player1.playerName} is Playing {player2.playerName} the game is the best of three rounds.\n");
-            Console.WriteLine("Live Long and Prosper!!");
         }
+
 
         public void RunGame()
         {
