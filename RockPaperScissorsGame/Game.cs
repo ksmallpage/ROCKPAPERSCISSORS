@@ -38,6 +38,8 @@ namespace RockPaperScissorsGame
             else
             {
                 Console.WriteLine("Thanks for Playing - Live Long and Prosper!!");
+                System.Environment.Exit(0);
+                
             }
         }
 
