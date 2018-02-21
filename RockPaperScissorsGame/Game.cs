@@ -27,9 +27,18 @@ namespace RockPaperScissorsGame
 
        
 
-        public void TrackWhoseTurn()
+        public void PlayAgain()
         {
-
+            Console.WriteLine("Do you want to play again?");
+            string playAgain = Console.ReadLine();
+            if(playAgain == "YES")
+            {
+                // how do you start game again in Main
+            }
+            else
+            {
+                Console.WriteLine("Thanks for Playing - Live Long and Prosper!!");
+            }
         }
 
         public void CalculateWinnerOfRound()
@@ -83,7 +92,14 @@ namespace RockPaperScissorsGame
 
         public void DisplayWinner()
         {
-
+            if (player1.numberOfWins == 2)
+            {
+                Console.WriteLine($"{player1.playerName} WINS the GAME.");
+            }
+            else
+            {
+                Console.WriteLine($"{player2.playerName} WINS the GAME");
+            }
         }
 
         public void DisplayWhoIsPlaying()
@@ -152,7 +168,7 @@ namespace RockPaperScissorsGame
 
             }
 
-                 DisplayScore();
+                 DisplayWinner();
 
 
 
