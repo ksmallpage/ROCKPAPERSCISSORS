@@ -115,10 +115,17 @@ namespace RockPaperScissorsGame
         public void RunGame()
         {
             WhoIsPlaying();
-            player1.PlayerChoice();
-            player2.PlayerChoice();
-            CalculateWinnerOfRound();
-            DisplayScore();
+            while(player1.numberOfWins < 2 && player2.numberOfWins < 2)
+            {
+                player1.PlayerChoice();
+                player2.PlayerChoice();
+                CalculateWinnerOfRound();
+                DisplayScore();
+
+            }
+
+                 DisplayScore();
+
 
             // Check who won round
 
@@ -133,7 +140,8 @@ namespace RockPaperScissorsGame
             // update score
 
 
-        }            
+        }
+                
 
     
     }
