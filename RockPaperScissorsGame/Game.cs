@@ -55,7 +55,8 @@ namespace RockPaperScissorsGame
             }
             else if (player1.playerChoice == "PAPER" && ((player2.playerChoice == "ROCK") || (player2.playerChoice == "SPOCK")))
             {
-                Console.WriteLine($"{player1.playerName} wins");
+                Console.WriteLine($"{player1.playerName} wins"
+                    );
                 player1.numberOfWins++;
             }
             else if (player1.playerChoice == "ROCK" && ((player2.playerChoice == "LIZZARD") || (player2.playerChoice == "SCISSORS")))
